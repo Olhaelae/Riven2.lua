@@ -2,17 +2,15 @@
 if GetObjectName(GetMyHero())~= "Riven" then return end
 
 -- version
-local ver = "0.53"
+local ver = "1.0"
 
 function AutoUpdate(data)
     if tonumber(data) > tonumber(ver) then
         PrintChat("New version found! " .. data)
         PrintChat("Downloading update, please wait...")
-        DownloadFileAsync("https://raw.githubusercontent.com/Olhaelae/Riven2.lua/master/Riven2.lua", SCRIPT_PATH ..
-
-"Riven2.lua", function() PrintChat("Update Complete, please 2x F6!") return end)
+        DownloadFileAsync("https://raw.githubusercontent.com/Olhaelae/Riven2.lua/master/Riven2.lua", SCRIPT_PATH .. "Riven2.lua", function() PrintChat("Update Complete, please 2x F6!") return end)
     else
-        PrintChat(string.format("<font color='#b756c5'> Riven </font>").."updated ! Version: "..ver)
+        PrintChat("No updates found!")
     end
 end
 
