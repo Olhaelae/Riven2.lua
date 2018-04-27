@@ -1,4 +1,10 @@
+-- champ name detector
 if GetObjectName(GetMyHero())~= "Riven" then return end
+
+-- lib
+
+require('Inspired')
+require('MapPositionGOS')
 
 -- Combo Menu
 local RivenMenu = Menu("Riven", "Riven")
